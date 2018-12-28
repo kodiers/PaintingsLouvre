@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		AC62D48B21D5BDE300664556 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC62D48A21D5BDE300664556 /* AppDelegate.swift */; };
-		AC62D48D21D5BDE300664556 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = AC62D48C21D5BDE300664556 /* art.scnassets */; };
 		AC62D48F21D5BDE300664556 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC62D48E21D5BDE300664556 /* ViewController.swift */; };
 		AC62D49221D5BDE300664556 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC62D49021D5BDE300664556 /* Main.storyboard */; };
 		AC62D49421D5BDE400664556 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC62D49321D5BDE400664556 /* Assets.xcassets */; };
 		AC62D49721D5BDE400664556 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC62D49521D5BDE400664556 /* LaunchScreen.storyboard */; };
+		AC62D49F21D5BF7100664556 /* paintings.json in Resources */ = {isa = PBXBuildFile; fileRef = AC62D49E21D5BF7100664556 /* paintings.json */; };
+		AC62D4A121D5C02F00664556 /* Paintings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC62D4A021D5C02F00664556 /* Paintings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AC62D48721D5BDE300664556 /* PaintingsLouvre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaintingsLouvre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC62D48A21D5BDE300664556 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC62D48C21D5BDE300664556 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		AC62D48E21D5BDE300664556 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC62D49121D5BDE300664556 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC62D49321D5BDE400664556 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC62D49621D5BDE400664556 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC62D49821D5BDE400664556 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC62D49E21D5BF7100664556 /* paintings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = paintings.json; sourceTree = "<group>"; };
+		AC62D4A021D5C02F00664556 /* Paintings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paintings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				AC62D48A21D5BDE300664556 /* AppDelegate.swift */,
-				AC62D48C21D5BDE300664556 /* art.scnassets */,
 				AC62D48E21D5BDE300664556 /* ViewController.swift */,
 				AC62D49021D5BDE300664556 /* Main.storyboard */,
+				AC62D49E21D5BF7100664556 /* paintings.json */,
 				AC62D49321D5BDE400664556 /* Assets.xcassets */,
 				AC62D49521D5BDE400664556 /* LaunchScreen.storyboard */,
 				AC62D49821D5BDE400664556 /* Info.plist */,
+				AC62D4A021D5C02F00664556 /* Paintings.swift */,
 			);
 			path = PaintingsLouvre;
 			sourceTree = "<group>";
@@ -125,10 +128,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC62D48D21D5BDE300664556 /* art.scnassets in Resources */,
 				AC62D49721D5BDE400664556 /* LaunchScreen.storyboard in Resources */,
 				AC62D49421D5BDE400664556 /* Assets.xcassets in Resources */,
 				AC62D49221D5BDE300664556 /* Main.storyboard in Resources */,
+				AC62D49F21D5BF7100664556 /* paintings.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC62D48F21D5BDE300664556 /* ViewController.swift in Sources */,
+				AC62D4A121D5C02F00664556 /* Paintings.swift in Sources */,
 				AC62D48B21D5BDE300664556 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
