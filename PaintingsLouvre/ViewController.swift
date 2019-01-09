@@ -105,6 +105,37 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         titleNode.position.y += Float(plane.height / 2)
         // and add it to the plane node
         planeNode.addChildNode(titleNode)
+        let painterNode = textNode(painting.artist, font: UIFont.systemFont(ofSize: 8))
+        painterNode.pivotOnTopCenter()
+        painterNode.position.y -= Float(plane.height / 2) + spacing
+        planeNode.addChildNode(painterNode)
+        let yearNode = textNode(painting.year, font: UIFont.systemFont(ofSize: 6))
+        yearNode.pivotOnTopCenter()
+        yearNode.position.y = painterNode.position.y - spacing - painterNode.height
+        planeNode.addChildNode(yearNode)
+        
+        let detailsWidth = max(titleNode.width, 0.25)
+        let detailsHeight = (Float(plane.height) - titleNode.height) + painterNode.height + yearNode.height + (spacing * 2)
+        let detailsPlane = SCNPlane(width: CGFloat(detailsWidth), height: CGFloat(detailsHeight))
+        let detailsNode = SCNNode(geometry: detailsPlane)
+        detailsNode.pivotOnTopLeft()
+        detailsNode.position.x += Float(plane.width / 2) + spacing
+        detailsNode.position.y = titleNode.position.y - titleNode.height - spacing
+        planeNode.addChildNode(detailsNode)
+        
+        DispatchQueue.main.async {
+            let width: CGFloat = 800
+            let height = width / (detailsPlane.width / detailsPlane.height)
+            let webView = WKWebView(frame: CGRect(x: 0, y: 0, width: width, height: height))
+            let request = URLRequest(url: painting.url)
+            webView.load(request)
+            detailsPlane.firstMaterial?.diffuse.contents = webView
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                SCNTransaction.animationDuration = 1
+                node.opacity = 1
+            })
+        }
+        
         return node
     }
     
